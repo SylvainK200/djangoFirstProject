@@ -25,7 +25,9 @@ SECRET_KEY = 'p(r%vvli!b($57^6ucj0&cj5*s+czku!$o-$$h71&69cv1*_0a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '*',
+]
 
 
 # Application definition
@@ -55,7 +57,7 @@ ROOT_URLCONF = 'tutorialbook.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [str(BASE_DIR.joinpath('templates'))],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
